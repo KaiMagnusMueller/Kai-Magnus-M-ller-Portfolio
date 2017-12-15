@@ -1,0 +1,27 @@
+:root {
+    --color: #eb2f6c;
+}
+
+html {
+    background-color: #212121;
+    color: #fbfbfb;
+}
+
+.wideImg {
+    background: url("img/birthrates_header_temp.png");
+    box-shadow: black ;
+}
+
+.active {
+    border-bottom: 3px solid var(--color);
+}
+
+h3 {
+    color: var(--color);
+}
+
+/*footer: special*/
+
+.special {
+    color: var(--color);
+}

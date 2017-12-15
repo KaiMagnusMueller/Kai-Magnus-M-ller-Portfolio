@@ -1,0 +1,154 @@
+:root {
+    --projectShadows: 0px 0px 20px 10px rgba(0, 0, 0, 0.3);;
+}
+
+h2, p {
+    /*Fix for main.css max width*/
+    max-width: none;
+    font-weight: 600;
+}
+
+.wideWrapper {
+    margin: 0 5% 0 5%;
+}
+
+.headSpace {
+    margin: 8% 5% 6% 5%;
+}
+
+.projectCourse {
+    font-weight: 500;
+    font-size: 12.5pt;
+}
+
+h2 {
+    margin-top: 1%;
+    font-size: 34pt;
+}
+
+.wideImg {
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: var(--projectShadows);
+}
+
+.imageCaption {
+    margin: 25px 15% 100px 15%;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 11pt;
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 67px;
+    left: 95px;
+
+}
+
+h3 {
+    font-family: "Sofia Pro", sans-serif;
+    font-weight: 600;
+    font-size: 18pt;
+    margin: 1em 0 0.4em 0;
+}
+
+.articleWrapper {
+    /*margin: 10% 28% 10% 28%;*/
+    margin: 0 24% 0% 24%;
+}
+
+.article {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12pt;
+    font-weight: 400;
+    margin-bottom: 70px;
+}
+
+.useCaseExample {
+    text-align: center;
+    margin: 25px 40px 20px 40px;
+    font-family: "Sofia Pro", sans-serif;
+    font-weight: 300;
+    font-size: 15pt;
+    color: white;
+}
+
+.option {
+    margin: 20px;
+    transition: color 400ms;
+    cursor: pointer;
+}
+
+.option:hover {
+    color: darkgrey;
+}
+
+h4 {
+    font-family: "Sofia Pro", sans-serif;
+    font-weight: 300;
+    font-size: 18pt;
+    color: white;
+    margin: 1em 0 0.4em 0;
+}
+
+.hidden {
+    display: none;
+}
+
+video{
+
+}
+
+h5 {
+    font-family: "Sofia Pro", sans-serif;
+    font-weight: 600;
+    font-size: 18pt;
+    color: white;
+    margin: 1em 0 0.4em 0;
+}
+
+.featureGallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5%;
+    margin: 120px 0 65px 0;
+}
+
+.feature {
+    grid-column: span 1;
+    margin-bottom: 20px;
+    transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.feature img {
+    width: 100%;
+}
+
+.feature:hover {
+    transform: scale(0.98);
+}
+
+@media screen and (max-width: 500px) {
+    .articleWrapper {
+        margin: 0 5% 0% 5%;
+    }
+
+    .imageCaption {
+        margin: 25px 5% 100px 5%;
+    }
+
+    .featureGallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    video {
+        width: 964px;
+        height: 602px;
+    }
+}

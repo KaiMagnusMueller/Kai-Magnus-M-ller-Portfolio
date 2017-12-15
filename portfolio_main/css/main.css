@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+:root {
+    --headline-size: 5.1vmax;
+}
+
+html {
+    background-color: white;
+    font-family: 'Sofia Pro', sans-serif;
+
+}
+
+* {
+    border: 0;
+    margin: 0;
+}
+/*TODO: test für font weight in tagline und contact*/
+h1 {
+    font-weight: 600;
+}
+
+.wrapper {
+    margin: 0 5% 0 5%;
+}
+
+.outerWrapper {
+
+}
+
+.wideWrapper {
+    margin: 0 5% 0 5%;
+}
+
+h2 {
+    margin-top: 1%;
+    font-size: 34pt;
+}
+
+.centered {
+    /*max-width: 1280px;*/
+    margin: auto;
+}
+
+.splashImg {
+    width: 100%;
+    height: 98vh;
+}
+
+#tagline {
+    color: black;
+    position: absolute;
+    font-size: 4vmax;
+    line-height: 115%;
+    margin: 12% 5% 0 7%;
+}
+
+#taglineMain {
+    /*text-decoration: underline;*/
+
+}
+
+/*
+p span {
+    border-bottom: solid 1px;
+}
+*/
+
+.work {
+    height: auto;
+    background-color: white;
+
+}
+.projects {
+    background-color: lightblue;
+    margin: 0 5% 0 5%;
+}
+
+.gridtest {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5vw;
+    background-color: white;
+    margin-bottom: 65px;
+}
+.box {
+    background-color: lightpink;
+    height: 40vw;
+    border-radius: 25px;
+    position: relative;
+    box-shadow: 0px 0px 40px 0px #d8d8d8;    /*Boxes are 990 * 768px at most */
+    transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.description, h2{
+    max-width: 360px;
+}
+
+.box:hover {
+    transform: scale(0.98);
+}
+
+
+
+.box h2 {
+    max-height: 80%;
+    margin: 4vmax 2.5vmax 0 2vmax;
+    font-size: var(--headline-size);
+    font-weight: 600;
+    line-height: 106%;
+}
+
+.description {
+    margin: 2vmax 2.5vmax 0 2vmax;
+    font-family: "Open Sans", sans-serif;
+
+}
+
+.course {
+    position: absolute;
+    max-width: inherit;
+    margin: 0 0 0 2vmax;
+    bottom: 2vmax;
+    font-style: inherit;
+    font-size: 1.5vmax;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+.a {
+    grid-column: 1 / 3;
+    background: url("../img/Projekt_02_small.png") top right;
+    background-size: cover;
+}
+
+.b {
+    grid-column: 3 / 6;
+    background: url("../img/Projekt_01_large.png") top right;
+    background-size: cover;
+}
+
+.c {
+    grid-column: 1 / 4;
+    background: url("../projects/aralsea/img/aralsea_start.jpg") top right;
+    background-size: cover;
+
+
+}
+
+.d {
+    grid-column: 4 / 6;
+    background: url("../projects/birthrates/img/birthrates_start.png") top right;
+    background-size: cover;
+
+
+}
+
+.e {
+    grid-column: 1 / 3;
+    background: url("../projects/franklin/img/franklin_start_3.jpg") top right;
+    background-size: cover;
+}
+
+.white {
+    color: white;
+    background-color: black;
+ }
+
+.black {
+    color: black;
+    background-color: white;
+}
+
+.linkhelper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.vita {
+    margin: 100px 0 0 0;
+    padding-top: 100px;
+    background-color: lightgreen;
+}
+
+.innerWrapper {
+    width: auto;
+    margin: 0 5% 0 5%;
+}
+
+#vita_text {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5vw;
+}
+
+h3 {
+    margin: 1em 0 0.5em 0;
+
+}
+
+.column {
+
+}
+
+.vita img {
+    margin: 100px 0 100px 0;
+    width: 100%;
+    height: auto;
+}
+
+#contact {
+    padding-top: 6%;
+    background-color: black;
+    height: 40vh;
+    color: white;
+    font-style: normal;
+}
+
+#contact h1 {
+    margin: 0 7% 0 7%;
+    text-decoration: none;
+    font-size: 3.8vmax;
+    line-height: 115%;
+}
+
+a {
+    /*color: #456eff;*/
+    color: dodgerblue;
+    text-decoration: none;
+    transition: color 400ms;
+
+}
+a .special {  }
+
+a:hover {
+    color: white;
+}
+
+.footerContainer {
+    background-color: black;
+}
+
+h2 {
+   max-width: none;
+}
+
+footer {
+    max-font-size: 16pt;
+    height: 80px;
+}
+
+footer p {
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 500px){
+    .gridtest {
+        grid-template-columns: 1fr;
+        background-color: white;
+        grid-row-gap: 65px;
+    }
+
+    #tagline {
+        margin-top: 10vh;
+    }
+
+    .box {
+        grid-column: 1;
+        height: 106vw;
+    }
+
+    .box h2 {
+        margin: 5vmax 4vmax 0 4vmax;
+    }
+
+    .description {
+        margin: 2vmax 4vmax 0 4vmax;
+    }
+
+    .course {
+        margin: 0 4vmax 0 4vmax;
+        bottom: 4vmax;
+        font-style: inherit;
+        font-size: 2.5vmax;
+    }
+
+    #vita_text {
+        grid-template-columns: 1fr;
+
+    }
+}
+
+@media screen and (min-width: 1024px){
+        .wideWrapper {
+            max-width: 964px;
+            margin: auto;
+        }
+}
+/*todo: größen vllt auf 1280 anpassen*/
+/*todo: 1500 nochmal separat?*/
+@media screen and (min-width: 1500px) {
+    #wrapper {
+        max-width: 1600px;
+    }
+
+    .outerWrapper {
+        max-width: 1600px;
+        margin: auto;
+    }
+
+    #tagline {
+        font-size: 75px;
+        margin: 180px 75px 0 75px;
+
+    }
+
+    .box {
+        height: 642px;
+    }
+
+    .box p {
+        max-width: 500px;
+    }
+
+    .box h2 {
+        max-width: 500px;
+        max-height: 80%;
+        margin: 60px 37px 0 30px;
+        font-size: 75px;
+    }
+
+    .description {
+    }
+
+    .course {
+
+        margin: 0 38px 0 30px;
+        bottom: 30px;
+        font-size: 23px;
+    }
+
+    footer p {
+        margin-left: 7%;
+
+    }
+}

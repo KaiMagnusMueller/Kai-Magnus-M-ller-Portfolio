@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Global Birth Rates Interactive Data Viz | Kai Magnus Müller</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/projects.css">
+    <link rel="stylesheet" href="birthrates_style.css">
+</head>
+<body>
+
+<!--<a href="../../index.html">-->
+<!--<i class="material-icons close">clear</i>-->
+<!--</a>-->
+<div class="wideWrapper">
+    <div class="headSpace">
+        <p class="projectCourse">GENERATIVE DESIGN</p>
+        <h2>Global Birth Rates Interactive Data Viz </h2>
+    </div>
+    <img src="img/birthrates_header_temp.png" class="wideImg">
+
+    <p class="imageCaption">
+        This interactive data visualization displays the population and birth rates of every country on earth. The user
+        can travel from 1950 up until 2010 and watch the countries develop.
+    </p>
+
+    <div class="articleWrapper">
+        <h3>Goal</h3>
+        <p class="article">
+            Programmed Design II incorporated the creation of an interactive data visualization based on real data using
+            only colors and basic shapes. Main goal was to find interesting relationships in the data and display them
+            in several connected visualizations in a comprehensible way.
+        </p>
+        <h3>Introduction</h3>
+        <p class="article">
+            This project uses open data supplied by the UN about fertility rates (childs per 100 women in the
+            corresponding year) of most countries, age distribution of mothers and their total populations.
+            Additionally, as a map based view proved to be the most readable, I used Googles coordinate data to map each
+            countries data to its geographic center. Each datapoint was available every 5 years from 1960 to 2015. This
+            makes it possible to see how each country changed in the past 55 years.
+        </p>
+    </div>
+    <img src="img/Circle_animation_tmp.png" class="wideImg">
+    <p class="imageCaption">
+        Two circles represent each country. The inner circle area is calculated according to birth rates and the outer
+        one according to population. While both values cannot be directly compared, their relation and change over time
+        can.
+    </p>
+    <div class="articleWrapper">
+        <h3>Selection</h3>
+        <p class="article">
+            The user can select countries on the world map to compare them. Selected countries are added to the
+            selection on the left side of the screen and normalized to display their population as the same radius. This
+            makes their individual birth rates easier to compare. From there on, users can view birth rates of all years
+            of all selected countries or get a detailed view of birth rates in all six age groups. This is of course
+            available in all years.
+        </p>
+        <h3>Trackpad Controls</h3>
+        <p class="article">
+            Because nothing like buttons and text were to be used, I implemented trackpad gestures via BetterTouchTool.
+        </p>
+    </div>
+    <!--<div class="useCaseExample">-->
+    <!--<h4 id="option1">Select</h4>-->
+    <!--<h4 id="option2">Change Year</h4>-->
+    <!--<h4 id="option3">Birth Rate Change</h4>-->
+    <!--<h4 id="option4">Birth Rate Detail</h4>-->
+    <!--<h4 id="option5">Deselect</h4>-->
+    <!--</div>-->
+    <p class="useCaseExample">
+        <span class="option active" id="0">Select</span>
+        <span class="option " id="1">Change Year</span>
+        <span class="option " id="2">Birth Rate Change</span>
+        <span class="option " id="3">Birth Rate Detail</span>
+        <span class="option " id="4">Deselect</span>
+    </p>
+    <!--TODO: controls aus-->
+    <video class="wideImg interactive" autoplay controls>
+        <source src="video/testVideo0.mp4" type="video/mp4">
+        <source src="img/testVideo0_2.webm" type="video/webm">
+    </video>
+    <video class="wideImg interactive" autoplay controls hidden>
+        <source src="video/testVideo1.mp4" type="video/mp4">
+        <source src="img/testVideo0_2.webm" type="video/webm">
+    </video>
+    <video class="wideImg interactive" autoplay controls hidden>
+        <source src="video/testVideo2.mp4" type="video/mp4">
+        <source src="img/testVideo0_2.webm" type="video/webm">
+    </video>
+    <video class="wideImg interactive" autoplay controls hidden>
+        <source src="video/testVideo3.mp4" type="video/mp4">
+        <source src="img/testVideo0_2.webm" type="video/webm">
+    </video>
+    <video class="wideImg interactive" autoplay controls hidden>
+        <source src="video/testVideo4.mp4" type="video/mp4">
+        <source src="img/testVideo0_2.webm" type="video/webm">
+    </video>
+
+    <p class="imageCaption interacCaption 0">The user is presented with a world map and can hover over any ountry to
+        highlight it. A left swype with two fingers adds a country to the selection. A darker shadow stays on the world
+        map to indicate which countries are selected. A swype right deselects the respective country. The selected
+        countries are lined up on the left hand side.
+    </p>
+    <p class="imageCaption interacCaption 0" hidden>On any screen a drag and hold changes the current year. The inner and outer
+        circles change in color to distinguish between each year. The inner and outer colors are interpolated from
+        lavender to red.
+    </p>
+    <p class="imageCaption interacCaption 0" hidden>When hovering over a selection, the circles increases in size for a small
+        amount to hint at further action. Swyping right displays all birth rates from 1950 to 2015. The color
+        interpolation is clearly visible and the population is not displayed. The selected countries vertical position
+        remains unchanged to keep the visualizations consistent.
+    </p>
+    <p class="imageCaption interacCaption 0" hidden>A zoom-in gesture triggers a detailed view of birth rates distinguished by
+        age groups. All other circles display averaged birth rates.It is possible to scroll through time here and the
+        change certain countries went through in a relative short amount of time becomes obvious.
+    </p>
+    <p class="imageCaption interacCaption 0" hidden>The user can deselect each country and add new ones to the selection
+        fluidly.
+    </p>
+
+    <div class="articleWrapper">
+        <h3>Process and Technology</h3>
+        <p class="article">
+            After I found a couple of interesting data sets. I started with scribbling different screens and ways to
+            display the data to get an idea how my visulalizations could look like. After my topic was settled I created
+            Illustrator concepts of the complete information structure over multiple iterations. Once that was done I
+            used JS and GSAP to build a working prototype.
+        </p>
+        <h3>About</h3>
+        <p class="article">
+            This is a student project created during winter semester 2016 of the Programmed Design II course by Hartmut
+            Bonacker and Jens Döring.
+        </p>
+    </div>
+
+
+    <!--TODO: bottom projects-->
+    <div class="wideWrapper">
+        <div class="featureGallery">
+            <div class="feature">
+                <img class="wideImg" src="../../projects/franklin/img/franklin_small0.jpg">
+            </div>
+            <div class="feature">
+                <img class="wideImg" src="../../projects/aralsea/img/aralsea_small0.jpg">
+            </div>
+            <div class="feature">
+                <img class="wideImg" src="img/birthrates_small0.jpg">
+            </div>
+        </div>
+
+        <!--TODO: end bottom projects-->
+
+    </div>
+</div>
+<div class="footerContainer centered">
+    <address id="contact" class="wideWrapper">
+        <h2>You are welcome to contact me <a class="special" href="https://www.twitter.com/_kaimagnus">@_kaimagnus</a>
+            or
+            say <a class="special" href="mailto:hello@kaimagnus.de">hello@kaimagnus.de</a></h2>
+    </address>
+
+    <footer class="footer wideWrapper">
+        <p>© 2017 Kai Magnus Müller - <span>Legal</span></p>
+    </footer>
+
+</div>
+</body>
+<script src="../../js/vendor/jquery-1.11.2.min.js" rel="script"></script>
+<script src="../../js/main.js" rel="script"></script>
+</html>
