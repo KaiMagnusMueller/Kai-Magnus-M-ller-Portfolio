@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
 
 :root {
-    --headline-size: 5.1vmax;
+    --headline-size: 4.5vmax;
+    --projectShadows: 0px 0px 35px 10px rgba(0, 0, 0, 0.35);;
+    --menucolor: #606060;
 }
 
 html {
-    background-color: white;
+    background-color: #f9f9f9;
     font-family: 'Sofia Pro', sans-serif;
-
 }
 
 * {
@@ -31,6 +32,40 @@ h1 {
     margin: 0 5% 0 5%;
 }
 
+.articleWrapper {
+    /*margin: 10% 28% 10% 28%;*/
+    margin: 0 5% 0 5%;
+}
+
+.menu {
+    padding-top: 32px;
+    font-family: "Sofia Pro", sans-serif;
+    font-weight: 600;
+    font-size: 12pt;
+    display: block;
+}
+
+.menu a {
+    color: var(--menucolor);
+}
+
+.left {
+    margin-right: 20px;
+    float: left;
+}
+.right {
+    margin-left: 20px;
+    float: right;
+}
+
+.wideImg {
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: var(--projectShadows);
+}
+
 h2 {
     margin-top: 1%;
     font-size: 34pt;
@@ -42,7 +77,6 @@ h2 {
 }
 
 .splashImg {
-    width: 100%;
     height: 98vh;
 }
 
@@ -50,8 +84,8 @@ h2 {
     color: black;
     position: absolute;
     font-size: 4vmax;
-    line-height: 115%;
-    margin: 12% 5% 0 7%;
+    line-height: 120%;
+    margin: 12% 0 0 0;
 }
 
 #taglineMain {
@@ -67,19 +101,17 @@ p span {
 
 .work {
     height: auto;
-    background-color: white;
 
 }
 .projects {
-    background-color: lightblue;
-    margin: 0 5% 0 5%;
+    /*background-color: lightblue;*/
+    /*margin: 0 5% 0 5%;*/
 }
 
 .gridtest {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 5vw;
-    background-color: white;
     margin-bottom: 65px;
 }
 .box {
@@ -87,7 +119,8 @@ p span {
     height: 40vw;
     border-radius: 25px;
     position: relative;
-    box-shadow: 0px 0px 40px 0px #d8d8d8;    /*Boxes are 990 * 768px at most */
+    box-shadow: 0 0 30px 5px #d8d8d8;
+    /*Boxes are 990 * 768px at most */
     transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -119,20 +152,29 @@ p span {
     position: absolute;
     max-width: inherit;
     margin: 0 0 0 2vmax;
-    bottom: 2vmax;
+    bottom: 1.8vmax;
     font-style: inherit;
     font-size: 1.5vmax;
     font-weight: 600;
     letter-spacing: 0.01em;
 }
+.g {
+    grid-column: 1 / 4;
+    background: url("../img/Projekt_01_large.png") top right;
+    background-size: cover;
+}.f {
+     grid-column: 4 / 6;
+     background: url("../img/Projekt_02_small.png") top right;
+     background-size: cover;
+ }
 
-.a {
+.e {
     grid-column: 1 / 3;
     background: url("../img/Projekt_02_small.png") top right;
     background-size: cover;
 }
 
-.b {
+.d {
     grid-column: 3 / 6;
     background: url("../img/Projekt_01_large.png") top right;
     background-size: cover;
@@ -146,7 +188,7 @@ p span {
 
 }
 
-.d {
+.b {
     grid-column: 4 / 6;
     background: url("../projects/birthrates/img/birthrates_start.png") top right;
     background-size: cover;
@@ -154,7 +196,7 @@ p span {
 
 }
 
-.e {
+.a {
     grid-column: 1 / 3;
     background: url("../projects/franklin/img/franklin_start_3.jpg") top right;
     background-size: cover;
@@ -162,12 +204,10 @@ p span {
 
 .white {
     color: white;
-    background-color: black;
  }
 
 .black {
     color: black;
-    background-color: white;
 }
 
 .linkhelper {
@@ -180,7 +220,7 @@ p span {
 .vita {
     margin: 100px 0 0 0;
     padding-top: 100px;
-    background-color: lightgreen;
+    /*background-color: #ffffff;*/
 }
 
 .innerWrapper {
@@ -210,17 +250,18 @@ h3 {
 }
 
 #contact {
-    padding-top: 6%;
-    background-color: black;
+    padding-top: 50px;
     height: 40vh;
-    color: white;
+    color: black;
+    /*Ansonsten kursiv wegen adress*/
     font-style: normal;
 }
 
-#contact h1 {
-    margin: 0 7% 0 7%;
+#contact h2 {
+    /*margin: 0 7% 0 7%;*/
     text-decoration: none;
     font-size: 3.8vmax;
+    font-weight: 600;
     line-height: 115%;
 }
 
@@ -234,11 +275,12 @@ a {
 a .special {  }
 
 a:hover {
-    color: white;
+    color: black;
 }
 
-.footerContainer {
-    background-color: black;
+.makeItBlack {
+    /*or not*/
+    background-color: inherit;
 }
 
 h2 {
@@ -251,11 +293,19 @@ footer {
 }
 
 footer p {
-    color: white;
-    font-size: 14px;
+    padding-top: 32px;
+    color: var(--menucolor);
+    font-size: 11pt;
     font-weight: 400;
 }
 
+footer a {
+    color: var(--menucolor);
+}
+
+
+
+/*-----------------------------------------*/
 @media screen and (max-width: 500px){
     .gridtest {
         grid-template-columns: 1fr;
@@ -265,6 +315,10 @@ footer p {
 
     #tagline {
         margin-top: 10vh;
+    }
+
+    .articleWrapper {
+        margin: 0 5% 0 5%;
     }
 
     .box {
@@ -301,49 +355,102 @@ footer p {
 }
 /*todo: größen vllt auf 1280 anpassen*/
 /*todo: 1500 nochmal separat?*/
-@media screen and (min-width: 1500px) {
-    #wrapper {
-        max-width: 1600px;
+@media screen and (min-width: 1280px) {
+    .wrapper {
+        max-width: 1150px;
+        margin: auto;
+
     }
 
+
     .outerWrapper {
-        max-width: 1600px;
+        max-width: 1280px;
         margin: auto;
     }
 
     #tagline {
-        font-size: 75px;
-        margin: 180px 75px 0 75px;
+        font-size: 52px;
+    }
 
+    .gridtest {
+        grid-column-gap: 64px;
+        grid-row-gap: 64px;
     }
 
     .box {
-        height: 642px;
+        height: 517px;
     }
 
     .box p {
-        max-width: 500px;
+        max-width: 400px;
     }
 
     .box h2 {
-        max-width: 500px;
         max-height: 80%;
-        margin: 60px 37px 0 30px;
-        font-size: 75px;
+        margin: 51px 32px 0 26px;
+        font-size: 58px;
     }
 
     .description {
+        margin: 26px 32px 0 26px;
     }
 
     .course {
-
-        margin: 0 38px 0 30px;
-        bottom: 30px;
-        font-size: 23px;
+        margin: 0 0 0 25px;
+        bottom: 23px;
+        font-size: 19px;
     }
 
+    #contact h2 {
+        font-size: 46px;
+    }
     footer p {
-        margin-left: 7%;
-
     }
 }
+
+/*@media screen and (min-width: 1500px) {*/
+    /*#wrapper {*/
+        /*max-width: 1600px;*/
+    /*}*/
+
+    /*.outerWrapper {*/
+        /*max-width: 1600px;*/
+        /*margin: auto;*/
+    /*}*/
+
+    /*#tagline {*/
+        /*font-size: 75px;*/
+        /*margin: 180px 75px 0 75px;*/
+
+    /*}*/
+
+    /*.box {*/
+        /*height: 642px;*/
+    /*}*/
+
+    /*.box p {*/
+        /*max-width: 500px;*/
+    /*}*/
+
+    /*.box h2 {*/
+        /*max-width: 500px;*/
+        /*max-height: 80%;*/
+        /*margin: 60px 37px 0 30px;*/
+        /*font-size: 75px;*/
+    /*}*/
+
+    /*.description {*/
+    /*}*/
+
+    /*.course {*/
+
+        /*margin: 0 38px 0 30px;*/
+        /*bottom: 30px;*/
+        /*font-size: 23px;*/
+    /*}*/
+
+    /*footer p {*/
+        /*margin-left: 7%;*/
+
+    /*}*/
+/*}*/

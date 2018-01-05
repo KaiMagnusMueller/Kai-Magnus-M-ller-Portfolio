@@ -18,6 +18,11 @@
 <!--<i class="material-icons close">clear</i>-->
 <!--</a>-->
 <div class="wideWrapper">
+    <div class="material-icons menu">
+        <a href="../../index.html" class="left special">Kai Magnus Müller</a>
+        <a href="../../about.html" class="right special">about me</a>
+        <a href="../../index.html" class="right special">work</a>
+    </div>
     <div class="headSpace">
         <p class="projectCourse">GENERATIVE DESIGN</p>
         <h2>Global Birth Rates Interactive Data Viz </h2>
@@ -45,7 +50,9 @@
             makes it possible to see how each country changed in the past 55 years.
         </p>
     </div>
-    <img src="img/Circle_animation_tmp.png" class="wideImg">
+    <!--<img src="img/Circle_animation_tmp.png" class="wideImg">-->
+    <video class="wideImg" autoplay muted loop src="video/birtrates_circle_progression.mp4">
+    </video>
     <p class="imageCaption">
         Two circles represent each country. The inner circle area is calculated according to birth rates and the outer
         one according to population. While both values cannot be directly compared, their relation and change over time
@@ -80,46 +87,35 @@
         <span class="option " id="4">Deselect</span>
     </p>
     <!--TODO: controls aus-->
-    <video class="wideImg interactive" autoplay controls>
-        <source src="video/testVideo0.mp4" type="video/mp4">
-        <source src="img/testVideo0_2.webm" type="video/webm">
+    <video class="wideImg interactive" autoplay muted src="video/testVideo0.mp4">
     </video>
-    <video class="wideImg interactive" autoplay controls hidden>
-        <source src="video/testVideo1.mp4" type="video/mp4">
-        <source src="img/testVideo0_2.webm" type="video/webm">
-    </video>
-    <video class="wideImg interactive" autoplay controls hidden>
-        <source src="video/testVideo2.mp4" type="video/mp4">
-        <source src="img/testVideo0_2.webm" type="video/webm">
-    </video>
-    <video class="wideImg interactive" autoplay controls hidden>
-        <source src="video/testVideo3.mp4" type="video/mp4">
-        <source src="img/testVideo0_2.webm" type="video/webm">
-    </video>
-    <video class="wideImg interactive" autoplay controls hidden>
-        <source src="video/testVideo4.mp4" type="video/mp4">
-        <source src="img/testVideo0_2.webm" type="video/webm">
-    </video>
-
     <p class="imageCaption interacCaption 0">The user is presented with a world map and can hover over any ountry to
         highlight it. A left swype with two fingers adds a country to the selection. A darker shadow stays on the world
         map to indicate which countries are selected. A swype right deselects the respective country. The selected
         countries are lined up on the left hand side.
     </p>
-    <p class="imageCaption interacCaption 0" hidden>On any screen a drag and hold changes the current year. The inner and outer
+    <video class="wideImg interactive" src="video/testVideo1.mp4">
+    </video>
+    <p class="imageCaption interacCaption 0" >On any screen a drag and hold changes the current year. The inner and outer
         circles change in color to distinguish between each year. The inner and outer colors are interpolated from
         lavender to red.
     </p>
-    <p class="imageCaption interacCaption 0" hidden>When hovering over a selection, the circles increases in size for a small
+    <video class="wideImg interactive" src="video/testVideo2.mp4">
+    </video>
+    <p class="imageCaption interacCaption 0" >When hovering over a selection, the circles increases in size for a small
         amount to hint at further action. Swyping right displays all birth rates from 1950 to 2015. The color
         interpolation is clearly visible and the population is not displayed. The selected countries vertical position
         remains unchanged to keep the visualizations consistent.
     </p>
-    <p class="imageCaption interacCaption 0" hidden>A zoom-in gesture triggers a detailed view of birth rates distinguished by
+    <video class="wideImg interactive" src="video/testVideo3.mp4">
+    </video>
+    <p class="imageCaption interacCaption 0" >A zoom-in gesture triggers a detailed view of birth rates distinguished by
         age groups. All other circles display averaged birth rates.It is possible to scroll through time here and the
         change certain countries went through in a relative short amount of time becomes obvious.
     </p>
-    <p class="imageCaption interacCaption 0" hidden>The user can deselect each country and add new ones to the selection
+    <video class="wideImg interactive" src="video/testVideo4.mp4">
+    </video>
+    <p class="imageCaption interacCaption 0" >The user can deselect each country and add new ones to the selection
         fluidly.
     </p>
 
@@ -137,38 +133,48 @@
             Bonacker and Jens Döring.
         </p>
     </div>
-
-
+</div>
     <!--TODO: bottom projects-->
     <div class="wideWrapper">
+        <!--<h3 id="otherProjects">Other Projects</h3>-->
         <div class="featureGallery">
-            <div class="feature">
+            <div class="feature white">
+                <a href="../../projects/franklin/franklin_proj.html">
+                    <div class="linkhelper"></div>
+                </a>
+                <h2>QUASAR</h2>
                 <img class="wideImg" src="../../projects/franklin/img/franklin_small0.jpg">
             </div>
-            <div class="feature">
+            <div class="feature black">
+                <a href="../../projects/aralsea/aralsea_proj.html">
+                    <div class="linkhelper"></div>
+                </a>
+                <h2>Aral Sea</h2>
                 <img class="wideImg" src="../../projects/aralsea/img/aralsea_small0.jpg">
             </div>
-            <div class="feature">
-                <img class="wideImg" src="img/birthrates_small0.jpg">
+            <div class="feature white">
+                <a href="birthrates_proj.html">
+                    <div class="linkhelper"></div>
+                </a>
+                <h2>Global Birth Rates Interactive Data Viz</h2>
+                <img class="wideImg" src="../../projects/birthrates/img/birthrates_small0.jpg">
             </div>
         </div>
-
-        <!--TODO: end bottom projects-->
-
     </div>
-</div>
-<div class="footerContainer centered">
+<!--TODO: end bottom projects-->
+
+<div class="makeItBlack">
     <address id="contact" class="wideWrapper">
         <h2>You are welcome to contact me <a class="special" href="https://www.twitter.com/_kaimagnus">@_kaimagnus</a>
             or
             say <a class="special" href="mailto:hello@kaimagnus.de">hello@kaimagnus.de</a></h2>
     </address>
 
-    <footer class="footer wideWrapper">
-        <p>© 2017 Kai Magnus Müller - <span>Legal</span></p>
+    <footer class="wideWrapper">
+        <p>© 2017 Kai Magnus Müller - <a href="about.html">Imprint</a></p>
     </footer>
-
 </div>
+
 </body>
 <script src="../../js/vendor/jquery-1.11.2.min.js" rel="script"></script>
 <script src="../../js/main.js" rel="script"></script>

@@ -5,6 +5,12 @@ $(document).ready(function () {
     var captions = document.getElementsByClassName("interacCaption")
     console.log(videos)
 
+    for (var i = 0; i < videos.length; i++) {
+        videos[i].hidden = true
+        captions[i].hidden = true
+    }
+    videos[0].hidden = false
+    captions[0].hidden = false
 
     $(".option").click(function () {
         $(".active").removeClass("active")
