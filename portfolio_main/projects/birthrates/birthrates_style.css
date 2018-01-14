@@ -27,6 +27,22 @@ h3 {
     color: var(--color-main);
 }
 
+.menu a {
+    color: var(--color-main);
+}
+
+footer p{
+    color: var(--color-text);
+}
+
+footer a {
+    color: var(--color-text);
+}
+
+footer a:hover {
+    color: var(--color-main);
+}
+
 #contact {
     color: var(--color-text);
 }
@@ -35,6 +51,3 @@ a:hover {
     color: var(--color-text);
 }
 
-#otherProjects {
-    color: var(--color-text);
-}

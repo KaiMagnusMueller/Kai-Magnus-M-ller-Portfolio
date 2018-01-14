@@ -1,3 +1,68 @@
-.wideImg {
-    background-image: url("img/franklin_header.jpg");
+:root {
+    --color-main: #fbfbfb;
+    --color-background: #262626;
+    --color-text: #fbfbfb;
+}
+
+html {
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+.active {
+    border-bottom: 3px solid var(--color-main);
+}
+
+h3 {
+    color: var(--color-main);
+}
+
+.useCaseExample {
+    color: var(--color-text);
+}
+
+/*footer: special*/
+
+.special {
+    color: #5cc5b0;
+}
+
+.menu a {
+    color: var(--color-main);
+}
+
+footer p{
+    color: var(--color-text);
+}
+
+footer a {
+    color: var(--color-text);
+}
+
+footer a:hover {
+    color: #5cc5b0;
+}
+
+#contact {
+    color: var(--color-text);
+}
+
+a {
+    color: #5cc5b0;
+}
+
+a:hover {
+    color: var(--color-text);
+}
+
+#head_1, #head_4 {
+    color: #ae35aa;
+}
+
+#head_2, #head_5 {
+    color: #5cc5b0;
+}
+
+#head_3{
+    color: #f4615a;
 }
