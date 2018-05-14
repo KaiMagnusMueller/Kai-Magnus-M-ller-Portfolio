@@ -1,0 +1,66 @@
+Portfolio Documentation
+
+File Structure
+
+portfolio_main/
+   css/
+     main.css
+     project.css
+   fonts/
+	 img/
+	 	portrait_start
+		js
+  	vendor
+    projects/
+      aralsea/
+        img/
+          aralsea_start.jpg
+          aralsea_small0.jpg
+      birthrates/
+        birthrates_proj.html
+        birthrates_style.css
+        img/
+          birthrates_header.jpg
+          birthrates_small0.jpg
+          birthrates_start.jpg
+        video/
+      franklin/
+      library/
+      gestures/
+      emoji/
+      wires/
+
+
+
+Required Project Files
+
+projects/
+  [projectname]/
+    [projectname]_proj.html
+    [projectname]_style.css
+  	img/
+  	    [projectname]_start.jpg			//Main page picture 702x546
+  	    [projectname]_header.jpg	    //First picture (or video, rename)
+  	    [projectname]_small0.jpg		//Small picture for related projects 768x502
+		...custom files
+    video/
+			...custom files
+
+
+main.css
+	//css of main page and global styles
+project.css
+	//css specific to project pages
+	//some styles get added and others overwritten
+[projectname]_style.css
+	//project specific styles
+	//namely main color, background color, text color
+
+pictures:
+	target file size: <1MB
+	width 2880px at 16:10
+
+video:
+	premiere > file > export > media
+	H.264, .mp4, 2880x1800px, 30fps,
+	target bit rate 4 Mbit/s, maximum bit rate 6 Mbit/s
