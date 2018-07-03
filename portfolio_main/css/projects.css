@@ -34,6 +34,10 @@ h2 {
     box-shadow: var(--projectShadows);
 }
 
+.noshadow {
+    box-shadow: none;
+}
+
 .imageCaption {
     margin: 25px 15% 50px 15%;
     min-height: 80px;

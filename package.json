@@ -1,0 +1,23 @@
+{
+  "name": "km-portfolio",
+  "version": "1.2.0",
+  "description": "Portfolio website of Kai Magnus Mueller",
+  "main": "index.js",
+  "scripts": {
+    "start": "budo --host localhost --dir ./portfolio_main --open --live --watch-glob '**/*.{html,css,js}'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaiMagnusMueller/Kai-Magnus-M-ller-Portfolio.git"
+  },
+  "author": "Kai Magnus Müller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KaiMagnusMueller/Kai-Magnus-M-ller-Portfolio/issues"
+  },
+  "homepage": "https://github.com/KaiMagnusMueller/Kai-Magnus-M-ller-Portfolio#readme",
+  "devDependencies": {
+    "budo": "^11.2.2"
+  }
+}

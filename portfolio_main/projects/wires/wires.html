@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wires | Kai Magnus Müller</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description"
+          content="Wires is a prototyping application for Internet of Things projects. It allows to connect screen designs with hardware to create combined prototypes.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/projects.css">
+    <link rel="stylesheet" href="wires_style.css">
+    <link rel="stylesheet" type="text/css" href="../../fonts/SofiaPro/SofiaPro.css">
+</head>
+<body>
+<div class="wideWrapper">
+    <div class="menu">
+        <a href="../../index.html" class="left special">Kai Magnus Müller</a>
+        <a href="../../index.html#vita_text" class="right special">about me</a>
+        <a href="../../index.html" class="right special">work</a>
+    </div>
+    <div class="headSpace">
+        <p class="projectCourse">INTERFACE DESIGN</p>
+        <!--<img class="back" src="../../img/backarrow.svg">-->
+        <h2>Wires</h2>
+    </div>
+    <!--TODO: bild einfügen-->
+    <img class="wideImg" src="img/wires_24.jpg">
+
+    <p class="imageCaption">Wires is a prototyping application for Internet of Things projects. It allows to connect
+        screen designs with hardware to create combined prototypes.
+    </p>
+
+    <div class="articleWrapper">
+        <h3>Introduction</h3>
+        <p class="article">There is currently a wide range of tools available that make it very easy for users to create
+            interactive prototypes starting with screen designs.<br><br>
+            Development of projects that incorporate hardware - such as IoT projects - require specialized tools that
+            are
+            <b>largely incompatible to existing design and prototyping workflows</b>. Most tools are based in software
+            development and focus less on UI design. If one wants to prototype IoT projects like Smart Home Apps, a lack
+            of applications that connect both screens and hardware becomes apparent.</p>
+        <h3>Current Approach</h3>
+        <p class="article">To kick off our project we collected and analyzed a selection of existing prototyping
+            software as well as hardware. Using our own experience <sup><a href="../gestures/feedback.html"
+                                                                           target="_blank">1</a>, <a
+                    href="../../projects/aralsea/aralsea.html" target="_blank">2</a></sup> and reports of other students
+            we compiled the typical process of developing hardware projects.<br><br>
+            From here on <b>we created a sample project</b> during which a Smart Home App connected to various weather
+            sensors got ready for prototyping. We went through each step it took to create a working prototype only
+            using tools that are currently available <b>collected difficulties and problems that arise in the
+                process</b>.
+        </p>
+    </div>
+    <img class="wideImg noshadow" src="img/tools.png">
+    <div class="articleWrapper">
+        <h3>Existing Tools</h3>
+        <p class="article">Next we analyzed a <b>selection of prototyping tools and their features</b>. Framer Studio,
+            Principle and Origami represent the three main ways to create prototypes. We collected their main features
+            advantages and drawbacks and decided to drop Principle from future analysis because its timeline based
+            prototypes are inherently not flexible enough.<br><br>
+            <b>Framer's and Origami's features were then categorized</b> with the Kano model. Documentation, element
+            grouping, shortcuts and a prototype preview proved to be essential features. Other important but not
+            elemental features are separation of programming and screen design, shareable
+            prototypes and code snippets.
+        </p>
+
+        <h3>Programming</h3>
+        <p class="article">We based our decision whether the prototypes of our application should be patch based or
+            written with classical code on the user groups we defined. While some students are more familiar with code
+            based tools, <b>the number of students who can profit from more and better guidance is greater</b>.
+            Implemented correctly, syntax errors are easier to spot when using patches and patches give a better visual
+            overview. With this in mind we decided to focus on a patch based system going forward.<br><br> With these
+            insights and our sample project, we were able to gather the necessary features for our use case and the
+            order in which they became relevant.
+        </p>
+        <h3>Wires</h3>
+        <p class="article">Often times the screen design is developed further than the hardware. To let users create
+            prototypes despite no actual data coming in, <b>Wires is able to generate placeholder data where sensor
+                input would
+                normally occur</b>. This way the prototype can be simulated even when no hardware is actually present.
+            All features are detailed in our sample use case below.
+            <br><br>
+            As <b>a tool for productive use</b> Wires is a native Mac App and uses standard macOS components. Main view
+            is a <b>canvas in the middle where patches are arranged and connected</b>. In the <b>left sidebar all
+                imported screen
+                designs are listed and available</b> for use. The <b>right sidebar includes output</b> of selected
+            elements and the prototype live preview.
+        </p>
+    </div>
+    <p class="useCaseExample">
+        <span class="option active" id="0">Working with Patches</span>
+        <span class="option " id="1">Patch Grouping</span>
+        <span class="option " id="2">Arduino Panel</span>
+        <span class="option " id="3">Debugging</span>
+        <span class="option " id="4">Export</span>
+    </p>
+    <!--TODO: controls aus-->
+    <video class="wideImg interactive" autoplay muted src="video/useCase_1.mp4">
+    </video>
+    <p class="imageCaption interacCaption 0">Patches can be placed by searching and clicking the '+' button that
+        appears. Layer patches can also be created by clicking the 'add' button next to a layer in the sidebar. The
+        search gives a preview of the patches' in- and outputs and a brief description. Patches can have many different
+        elements from simple text fields to checkboxes.
+    </p>
+    <video class="wideImg interactive" muted src="video/useCase_2.mp4">
+    </video>
+    <p class="imageCaption interacCaption 0">Patches can be grouped together to simplify the prototype. Groups can be
+        shared as prefabs with other community members to include in their prototypes. Inputs and outputs can be set
+        just as easily as the connections between patches and named for clarification.
+    </p>
+    <video class="wideImg interactive" muted src="video/useCase_3.mp4">
+    </video>
+    <p class="imageCaption interacCaption 0">All patches with Arduino connections can have their pins set in a dedicated
+        panel. (Alternatively, they can be set on each patch individually) A board preview makes it easy to recognize
+        the correct pins on the Arduino side. Warnings indicate unset pins.
+    </p>
+    <video class="wideImg interactive" muted src="video/useCase_4.mp4">
+    </video>
+    <p class="imageCaption interacCaption 0">Because the prototype is a live preview users can always see its output,
+        whether it fails or runs as intended. Especially in large prototypes however, it is not obvious where it breaks.
+        Running in debug mode, small pearls move along the connections to give a visual representation of the data flow.
+        Patches can be marked as breakpoints to stop the prototype.
+    </p>
+    <video class="wideImg interactive" muted src="video/useCase_5.mp4">
+    </video>
+    <p class="imageCaption interacCaption 0">The finished prototype can be exported as a standalone app. Users can
+        decide if they want to include the necessary packages to run with hardware or set new pins for another Arduino.
+        This can also be done in the standalone app itself.
+    </p>
+
+    <div class="articleWrapper">
+        <h3>Patches</h3>
+        <p class="article">
+            Properties can be added to patches via a plus button. <b>Values can be set manually or are variable</b> via
+            their text field or with a connected input source respectively. When the placeholder pin is set on Arduino
+            patches, the <b>patch itself will generate random values between the set bounds</b> and the current signal
+            rate. This approach combines <b>multiple patches in one to simplify the development process</b> while
+            leaving it open to custom solutions.
+        </p>
+    </div>
+    <img src="img/patches.png" class="wideImg noshadow">
+    <p class="imageCaption">Patches are grouped to indicate their responsibilities. Grey patches contain logic and other
+        basic functionality, purple patches control properties and animations. Screen elements themselves are blue.
+        Patches that communicate with connected hardware are turquoise, referencing the Arduino board color.
+    </p>
+    <div class="articleWrapper">
+        <h3>Process and Technology</h3>
+        <p class="article">Focus of this project was twofold. <b>First, analysis of tools, workflows and users</b> and
+            <b>second the synthesis of all findings</b> into a new and improved Application.
+            <br><br>
+            My focus on this project was <b>tool analysis, layout, structure of patches and their behavior</b>. To
+            present our final application I created the <b>interactive part of our prototype to showcase the patches</b>
+            and their behavior with node.js. David Glock animated the rest of our features in After Effects. Both parts
+            were then <b>combined to form a seamless interactive and animated prototype</b>.
+        </p>
+        <h3>About</h3>
+        <p class="article">This was a student project created during winter semester 2017/18 as part of the Interface
+            Design I course by <a href="http://www.gronbach.info">Fabian Gronbach</a> together with <a
+                    href="http://www.davidglock.de">David Glock</a>.
+            <br><br>
+            <a href="../../docs/Wires_DavidGlock_KaiMagnusMueller.pdf">Documentation</a>
+
+        </p>
+    </div>
+</div>
+<!--TODO: bottom projects-->
+<div class="wideWrapper">
+    <!--<h3 id="otherProjects">Other Projects</h3>-->
+    <div class="featureGallery">
+        <div class="feature white">
+            <a href="../gestures/feedback.html">
+                <div class="linkhelper"></div>
+            </a>
+            <h2>Feedback for Gesture Controlled Devices</h2>
+            <img class="wideImg" src="../../projects/gestures/img/gestures_small0.png">
+        </div>
+        <div class="feature black">
+            <a href="../aralsea/aralsea.html">
+                <div class="linkhelper"></div>
+            </a>
+            <h2>Aral Sea</h2>
+            <img class="wideImg" src="../../projects/aralsea/img/aralsea_small0.jpg">
+        </div>
+        <div class="feature black">
+            <a href="../hfg-emoji/openmoji.html">
+                <div class="linkhelper"></div>
+            </a>
+            <h2>OpenMoji</h2>
+            <img class="wideImg" src="../../projects/hfg-emoji/img/emoji_small.png">
+        </div>
+    </div>
+</div>
+<!--TODO: end bottom projects-->
+
+<div class="makeItBlack">
+    <address id="contact" class="wideWrapper">
+        <h2>You are very welcome to contact me <a class="special"
+                                                  href="https://www.twitter.com/_kaimagnus">@_kaimagnus</a>
+            or
+            say <a class="special" href="mailto:hello@kaimagnus.de">hello@kaimagnus.de</a></h2>
+    </address>
+
+    <footer class="wideWrapper">
+        <p>© 2018 Kai Magnus Müller - <a href="../../imprint.html">Imprint</a></p>
+    </footer>
+</div>
+
+</body>
+<script src="../../js/vendor/jquery-1.11.2.min.js" rel="script"></script>
+<script src="../../js/main.js" rel="script"></script>
+</html>

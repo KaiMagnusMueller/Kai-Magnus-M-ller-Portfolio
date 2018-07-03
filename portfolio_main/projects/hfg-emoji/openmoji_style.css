@@ -1,0 +1,61 @@
+:root {
+    --color-main: #a4c318;
+    /*--color-main: #30acab;*/
+    --color-background: #ffffff;
+    --color-text: #101010;
+}
+
+html {
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+.active {
+    border-bottom: 3px solid var(--color-main);
+}
+
+h3 {
+    color: var(--color-main);
+}
+
+.useCaseExample {
+    color: var(--color-text);
+}
+
+/*footer: special*/
+
+.special {
+    color: var(--color-main);
+}
+
+.menu a {
+    color: var(--color-main);
+}
+
+footer p{
+    color: var(--color-text);
+}
+
+footer a {
+    color: var(--color-text);
+}
+
+footer a:hover {
+    color: var(--color-main);
+}
+
+#contact {
+    color: var(--color-text);
+}
+
+a:hover {
+    color: var(--color-text);
+}
+
+.openmoji {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
