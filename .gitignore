@@ -1,9 +1,10 @@
-.DS_Store
+
 .idea/*
 *.mp4
 *.pdf
 *.key
 node_modules/*
+kirby/*
 
 prepros-6.config
 
@@ -12,3 +13,4 @@ portfolio_main/projects/birthrates/img/birthrates_small0_backup.jpg
 portfolio_main/projects/franklin/img/franklin_header_gross.png
 portfolio_main/projects/franklin/img/franklin_small0_backup.jpg
 portfolio_main/google4add27e48244e909.html
+.DS_Store

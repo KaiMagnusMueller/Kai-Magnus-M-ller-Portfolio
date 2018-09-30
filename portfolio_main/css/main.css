@@ -3,12 +3,29 @@
 :root {
     --headline-size: 4.5vmax;
     --projectShadows: 0px 0px 35px 10px rgba(0, 0, 0, 0.35);;
-    --menucolor: dodgerblue;
+    --imageshadow: 0px 0px 35px 10px rgba(0, 0, 0, 0.10);;
+
+    --colormenu: dodgerblue;
+    --colorheader: #363352;
+    --colortext: #333333;
+    --colortext-light: #B2B2B2;
+    --colortext-superlight: #E6E6E6;
+
+    --text-font: "Open Sans", sans-serif;
+
+    --size-header-main: 15px;
+    --header-project: 18px;
+
+    --size-text: 13px;
+    --size-text-nav: 11px;
+    --size-text-secondary: 13px;
+    --size-text-secondary-small: 9px;
 }
 
 html {
     background-color: #f9f9f9;
     font-family: SofiaPro, sans-serif;
+    font-weight: normal;
 }
 
 * {
@@ -16,12 +33,13 @@ html {
     margin: 0;
 }
 /*TODO: test für font weight in tagline und contact*/
-h1 {
-    font-weight: bold;
+#header-main {
+    font-size: var(--size-header-main);
+    color: var(--colorheader);
 }
 
 .wrapper {
-    margin: 0 5% 0 5%;
+    margin: 0 10% 0 10%;
 }
 
 .wideWrapper {
@@ -34,15 +52,23 @@ h1 {
 }
 
 .menu {
-    padding-top: 32px;
+    color: var(--colormenu);
+
+    padding-top: 44px;
     font-family: SofiaPro, sans-serif;
     font-weight: normal;
     font-size: 12pt;
     display: block;
 }
 
-.menu a {
-    color: var(--menucolor);
+.nav_right {
+    font-size: var(--size-text);
+    text-transform: uppercase;
+    color: var(--colortext-light);
+}
+
+.nav_right:first-child {
+    color: var(--colortext);
 }
 
 .left {
@@ -52,6 +78,14 @@ h1 {
 .right {
     margin-left: 20px;
     float: right;
+}
+
+.dividerLine {
+    width: 100%;
+    margin: 14px 0;
+
+    border-top: 1px var(--colortext-superlight);
+    color: var(--colortext-superlight);
 }
 
 .wideImg {
@@ -73,7 +107,7 @@ h2 {
 }
 
 .splashImg {
-    height: 98vh;
+    height: 96vh;
 }
 
 #tagline {
@@ -104,6 +138,22 @@ p span {
     /*margin: 0 5% 0 5%;*/
 }
 
+/*TODO: css für projekt*/
+._project {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .gridtest {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -128,8 +178,6 @@ p span {
     transform: scale(0.98);
 }
 
-
-
 .box h2 {
     max-height: 80%;
     margin: 4vmax 2.5vmax 0 2vmax;
@@ -140,7 +188,7 @@ p span {
 
 .description {
     margin: 2vmax 2.5vmax 0 2vmax;
-    font-family: "Open Sans", sans-serif;
+    font-family: var(--text-font)
 
 }
 
@@ -229,13 +277,13 @@ p span {
 }
 
 .vitaParagraph {
-    font-family: "Open Sans", sans-serif;
+    font-family: var(--text-font);
 }
 
 h3 {
     margin: 1em 0 0.5em 0;
     font-size: 18pt;
-    color: var(--menucolor);
+    color: var(--colormenu);
 }
 
 .column {
@@ -275,7 +323,6 @@ a {
     transition: color 400ms;
 
 }
-a .special {  }
 
 a:hover {
     color: black;
@@ -307,7 +354,7 @@ footer a {
 }
 
 footer a:hover {
-    color: var(--menucolor);
+    color: var(--colormenu);
 }
 
 sup {
